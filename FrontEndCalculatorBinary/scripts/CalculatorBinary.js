@@ -6,6 +6,8 @@ const DIVIDER = 2;
 let currentFunction = convertForBinary;
 
 function toggleFunction(){
+    var messageInput = document.getElementById("message-input");
+    var inputElement = document.getElementById("Input").value = " ";
     var resultadoElement = document.getElementById("resultado");
     var titleElement = document.getElementById("title-calculator");
     
@@ -14,14 +16,16 @@ function toggleFunction(){
     resultadoElement.textContent = "";
 
     titleElement.textContent = (currentFunction === convertForBinary) ? "Decimal For Binary" : "Binary For Decimal";
+
+    messageInput.textContent = (currentFunction === convertForBinary) ? "DIGITE UM NUMERO DECIMAL" : "DIGITE UM NUMERO BINARIO";
+
 }
 
 function convertForBinary(){
     var decimalInput = document.getElementById("Input").value;
     var resultadoElement = document.getElementById("resultado");
     if(isNaN(decimalInput) || decimalInput === ""){
-        alert('Por favor, insira um número decimal válido.');
-            return;
+        showAlert("insira um número decimal válido");
     }
 
     var binary = "";
@@ -54,8 +58,10 @@ function BinaryForDecimal(){
 }
 
 function limpar(){
+    var inputElement = document.getElementById("Input").value = " ";
     var resultadoElement = document.getElementById("resultado");
     resultadoElement.textContent = " ";
+    
 }
 
 function performConversion() {
