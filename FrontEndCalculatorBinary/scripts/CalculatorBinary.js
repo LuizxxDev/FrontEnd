@@ -1,5 +1,5 @@
 //@Author: Luiz Felipe
-//@GitHub: https://github.com/LuizxxDev/Estudos-Java/tree/main/CalculatorBinary/FrontEnd
+//@GitHub: https://github.com/LuizxxDev/FrontEnd/tree/main/FrontEndCalculatorBinary/CalculatorBinary.js
 
 const DIVIDER = 2;
 
